@@ -9,7 +9,7 @@ open hw1_Lib
 type TestClass () =
 
     [<TestMethod>]
-    member this.Testfib () =
+    member this.TestFibonacci () =
         Assert.AreEqual(0, Fibonacci.fib 0);
         Assert.AreEqual(1, Fibonacci.fib 1);
         Assert.AreEqual(1, Fibonacci.fib 2);
@@ -33,7 +33,7 @@ type TestClass () =
         Assert.AreEqual(-55, Fibonacci.fib -10);
 
     [<TestMethod>]
-    member this.Testfact () =
+    member this.TestFactorial () =
         Assert.AreEqual(1, Factorial.fact 0);
         Assert.AreEqual(1, Factorial.fact 1);
         Assert.AreEqual(2, Factorial.fact 2);
