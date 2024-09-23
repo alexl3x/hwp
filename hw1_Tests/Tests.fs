@@ -10,27 +10,27 @@ type TestClass () =
 
     [<TestMethod>]
     member this.Testfib () =
-        Assert.AreEqual(0, Algs.fib 0);
-        Assert.AreEqual(1, Algs.fib 1);
-        Assert.AreEqual(1, Algs.fib 2);
-        Assert.AreEqual(2, Algs.fib 3);
-        Assert.AreEqual(3, Algs.fib 4);
-        Assert.AreEqual(5, Algs.fib 5);
-        Assert.AreEqual(8, Algs.fib 6);
-        Assert.AreEqual(13, Algs.fib 7);
-        Assert.AreEqual(21, Algs.fib 8);
-        Assert.AreEqual(34, Algs.fib 9);
-        Assert.AreEqual(55, Algs.fib 10);
-        Assert.AreEqual(1, Algs.fib -1);
-        Assert.AreEqual(-1, Algs.fib -2);
-        Assert.AreEqual(2, Algs.fib -3);
-        Assert.AreEqual(-3, Algs.fib -4);
-        Assert.AreEqual(5, Algs.fib -5);
-        Assert.AreEqual(-8, Algs.fib -6);
-        Assert.AreEqual(13, Algs.fib -7);
-        Assert.AreEqual(-21, Algs.fib -8);
-        Assert.AreEqual(34, Algs.fib -9);
-        Assert.AreEqual(-55, Algs.fib -10);
+        Assert.AreEqual(0, Fibonacci.fib 0);
+        Assert.AreEqual(1, Fibonacci.fib 1);
+        Assert.AreEqual(1, Fibonacci.fib 2);
+        Assert.AreEqual(2, Fibonacci.fib 3);
+        Assert.AreEqual(3, Fibonacci.fib 4);
+        Assert.AreEqual(5, Fibonacci.fib 5);
+        Assert.AreEqual(8, Fibonacci.fib 6);
+        Assert.AreEqual(13, Fibonacci.fib 7);
+        Assert.AreEqual(21, Fibonacci.fib 8);
+        Assert.AreEqual(34, Fibonacci.fib 9);
+        Assert.AreEqual(55, Fibonacci.fib 10);
+        Assert.AreEqual(1, Fibonacci.fib -1);
+        Assert.AreEqual(-1, Fibonacci.fib -2);
+        Assert.AreEqual(2, Fibonacci.fib -3);
+        Assert.AreEqual(-3, Fibonacci.fib -4);
+        Assert.AreEqual(5, Fibonacci.fib -5);
+        Assert.AreEqual(-8, Fibonacci.fib -6);
+        Assert.AreEqual(13, Fibonacci.fib -7);
+        Assert.AreEqual(-21, Fibonacci.fib -8);
+        Assert.AreEqual(34, Fibonacci.fib -9);
+        Assert.AreEqual(-55, Fibonacci.fib -10);
 
     [<TestMethod>]
     member this.Testfact () =

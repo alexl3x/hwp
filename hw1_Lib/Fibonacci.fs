@@ -33,7 +33,7 @@ module Matrix =
                 k <- k / 2
             acc
 
-module Algs =
+module Fibonacci =
 
     let fibNonNeg n =
         if n = 0 then
