@@ -45,6 +45,11 @@ type TestClass () =
     [<TestMethod>]
     member this.TestBubbleSort () =
 
+        let expected = [| |]
+        let actual   = [| |]
+        BubbleSort.sort actual
+        CollectionAssert.AreEqual(expected, actual)
+
         let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
         let actual   = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
         BubbleSort.sort actual
@@ -68,6 +73,11 @@ type TestClass () =
     [<TestMethod>]
     member this.TestQuickSortInPlace () =
 
+        let expected = [| |]
+        let actual   = [| |]
+        QuickSort.sortInPlace actual
+        CollectionAssert.AreEqual(expected, actual)
+
         let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
         let actual   = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
         QuickSort.sortInPlace actual
@@ -87,9 +97,14 @@ type TestClass () =
         let actual   = [| 2; 2; 2; 2; 1; 1; 1; 1; 3; 3; |]
         QuickSort.sortInPlace actual
         CollectionAssert.AreEqual(expected, actual)
-        
+
     [<TestMethod>]
     member this.TestQuickSort () =
+
+        let expected = [| |]
+        let shuffled = [| |]
+        let actual = QuickSort.sort shuffled
+        CollectionAssert.AreEqual(expected, actual)
 
         let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
         let shuffled = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
