@@ -7,5 +7,6 @@
     <Compile Include="BubbleSort.fs" />
     <Compile Include="Factorial.fs" />
     <Compile Include="Fibonacci.fs" />
+    <Compile Include="QuickSort.fs" />
   </ItemGroup>
 </Project>
