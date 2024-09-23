@@ -4,6 +4,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Factorial.fs" />
     <Compile Include="Fibonacci.fs" />
   </ItemGroup>
 </Project>

@@ -31,3 +31,13 @@ type TestClass () =
         Assert.AreEqual(-21, Algs.fib -8);
         Assert.AreEqual(34, Algs.fib -9);
         Assert.AreEqual(-55, Algs.fib -10);
+
+    [<TestMethod>]
+    member this.Testfact () =
+        Assert.AreEqual(1, Factorial.fact 0);
+        Assert.AreEqual(1, Factorial.fact 1);
+        Assert.AreEqual(2, Factorial.fact 2);
+        Assert.AreEqual(6, Factorial.fact 3);
+        Assert.AreEqual(24, Factorial.fact 4);
+        Assert.AreEqual(120, Factorial.fact 5);
+        Assert.AreEqual(720, Factorial.fact 6);
