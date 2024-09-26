@@ -4,9 +4,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BubbleSort.fs" />
-    <Compile Include="Factorial.fs" />
-    <Compile Include="Fibonacci.fs" />
-    <Compile Include="QuickSort.fs" />
+    <Compile Include="Numeric.fs" />
+    <Compile Include="Sort.fs" />
   </ItemGroup>
 </Project>

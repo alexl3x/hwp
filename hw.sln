@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "hw1_Lib", "hw1_Lib\hw1_Lib.fsproj", "{ABC75A3E-CDA1-4B11-A69C-BAC3AB4FDCFE}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Lib", "Lib\Lib.fsproj", "{ABC75A3E-CDA1-4B11-A69C-BAC3AB4FDCFE}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "hw1_Tests", "hw1_Tests\hw1_Tests.fsproj", "{30981763-7CF2-4311-8B28-38ACF7758826}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tests", "Tests\Tests.fsproj", "{30981763-7CF2-4311-8B28-38ACF7758826}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
