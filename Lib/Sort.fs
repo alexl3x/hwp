@@ -31,9 +31,7 @@ module Sort =
         for i = a.Length - 2 downto 0 do
             for j = 0 to i do
                 if a[j] > a[j + 1] then
-                    let tmp = a[j]
-                    a[j] <- a[j + 1]
-                    a[j + 1] <- tmp
+                    Utils.swap &a[j] &a[j + 1]
 
     let rec quickSortInPlaceImpl (sp: Span<int>) =
         if sp.Length <> 0 then
