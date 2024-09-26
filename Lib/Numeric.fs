@@ -35,13 +35,13 @@ module Numeric =
                     k <- k / 2
                 acc
 
-    let rec fact n =
+    let rec factorial n =
         assert (n >= 0)
         if n = 0
         then 1
-        else n * fact (n - 1)
+        else n * factorial (n - 1)
 
-    let fibNonNeg n =
+    let fibonacciNonNeg n =
         assert (n >= 0)
         if n = 0 then
             0
@@ -51,11 +51,11 @@ module Numeric =
             let mpow = Matrix.power n m
             mpow[0, 1]
 
-    let fib n =
+    let fibonacci n =
         if n >= 0
         then
-            fibNonNeg n
+            fibonacciNonNeg n
         else
             if n % 2 = 0
-            then - fibNonNeg (-n)
-            else fibNonNeg (-n)
+            then - fibonacciNonNeg (-n)
+            else fibonacciNonNeg (-n)
