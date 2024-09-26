@@ -27,17 +27,19 @@ module Sort =
                 i <- i + 1
             m
 
+    open Utils
+
     let bubbleSort (a: int array) =
         for i = a.Length - 2 downto 0 do
             for j = 0 to i do
                 if a[j] > a[j + 1] then
-                    Utils.swap &a[j] &a[j + 1]
+                    swap &a[j] &a[j + 1]
 
     let rec quickSortInPlaceImpl (sp: Span<int>) =
         if sp.Length <> 0 then
             let pivot = sp[0]
-            let m1 = Utils.partition sp (fun n -> n < pivot)
-            let m2 = Utils.partition (sp.Slice(m1)) (fun n -> n = pivot)
+            let m1 = partition sp (fun n -> n < pivot)
+            let m2 = partition (sp.Slice(m1)) (fun n -> n = pivot)
             quickSortInPlaceImpl (sp.Slice(0, m1))
             quickSortInPlaceImpl (sp.Slice(m1 + m2))
 
