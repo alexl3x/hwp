@@ -78,3 +78,7 @@ type TestSort () =
     [<TestMethod>]
     member this.TestQuickSort () =
         this.TestSort(Sort.quickSort)
+
+    [<TestMethod>]
+    member this.TestMergeSort () =
+        this.TestSort(Sort.mergeSort)
