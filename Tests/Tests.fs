@@ -45,58 +45,36 @@ type TestNumeric () =
 [<TestClass>]
 type TestSort () =
 
-    [<TestMethod>]
-    member this.TestBubbleSort () =
-
+    member this.TestSort(sort: int array -> unit) =
         let expected = [| |]
         let actual   = [| |]
-        Sort.bubbleSort actual
+        sort actual
         CollectionAssert.AreEqual(expected, actual)
 
         let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
         let actual   = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
-        Sort.bubbleSort actual
+        sort actual
         CollectionAssert.AreEqual(expected, actual)
 
         let expected = [| 1; 1; 1; 1; 1; 1; 1; 1; 1; 1 |]
         let actual   = [| 1; 1; 1; 1; 1; 1; 1; 1; 1; 1 |]
-        Sort.bubbleSort actual
+        sort actual
         CollectionAssert.AreEqual(expected, actual)
 
         let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
         let actual   = [| 2; 6; 8; 4; 1; 5; 7; 9; 3; 0 |]
-        Sort.bubbleSort actual
+        sort actual
         CollectionAssert.AreEqual(expected, actual)
 
         let expected = [| 1; 1; 1; 1; 2; 2; 2; 2; 3; 3; |]
         let actual   = [| 2; 2; 2; 2; 1; 1; 1; 1; 3; 3; |]
-        Sort.bubbleSort actual
+        sort actual
         CollectionAssert.AreEqual(expected, actual)
+
+    [<TestMethod>]
+    member this.TestBubbleSort () =
+        this.TestSort(Sort.bubbleSort)
 
     [<TestMethod>]
     member this.TestQuickSort () =
-
-        let expected = [| |]
-        let actual   = [| |]
-        Sort.quickSort actual
-        CollectionAssert.AreEqual(expected, actual)
-
-        let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
-        let actual   = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
-        Sort.quickSort actual
-        CollectionAssert.AreEqual(expected, actual)
-
-        let expected = [| 1; 1; 1; 1; 1; 1; 1; 1; 1; 1 |]
-        let actual   = [| 1; 1; 1; 1; 1; 1; 1; 1; 1; 1 |]
-        Sort.quickSort actual
-        CollectionAssert.AreEqual(expected, actual)
-
-        let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
-        let actual   = [| 2; 6; 8; 4; 1; 5; 7; 9; 3; 0 |]
-        Sort.quickSort actual
-        CollectionAssert.AreEqual(expected, actual)
-
-        let expected = [| 1; 1; 1; 1; 2; 2; 2; 2; 3; 3; |]
-        let actual   = [| 2; 2; 2; 2; 1; 1; 1; 1; 3; 3; |]
-        Sort.quickSort actual
-        CollectionAssert.AreEqual(expected, actual)
+        this.TestSort(Sort.quickSort)
