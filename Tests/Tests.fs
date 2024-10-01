@@ -74,57 +74,29 @@ type TestSort () =
         CollectionAssert.AreEqual(expected, actual)
 
     [<TestMethod>]
-    member this.TestQuickSortInPlace () =
+    member this.TestQuickSort () =
 
         let expected = [| |]
         let actual   = [| |]
-        Sort.quickSortInPlace actual
+        Sort.quickSort actual
         CollectionAssert.AreEqual(expected, actual)
 
         let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
         let actual   = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
-        Sort.quickSortInPlace actual
+        Sort.quickSort actual
         CollectionAssert.AreEqual(expected, actual)
 
         let expected = [| 1; 1; 1; 1; 1; 1; 1; 1; 1; 1 |]
         let actual   = [| 1; 1; 1; 1; 1; 1; 1; 1; 1; 1 |]
-        Sort.quickSortInPlace actual
+        Sort.quickSort actual
         CollectionAssert.AreEqual(expected, actual)
 
         let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
         let actual   = [| 2; 6; 8; 4; 1; 5; 7; 9; 3; 0 |]
-        Sort.quickSortInPlace actual
+        Sort.quickSort actual
         CollectionAssert.AreEqual(expected, actual)
 
         let expected = [| 1; 1; 1; 1; 2; 2; 2; 2; 3; 3; |]
         let actual   = [| 2; 2; 2; 2; 1; 1; 1; 1; 3; 3; |]
-        Sort.quickSortInPlace actual
-        CollectionAssert.AreEqual(expected, actual)
-
-    [<TestMethod>]
-    member this.TestQuickSort () =
-
-        let expected = [| |]
-        let shuffled = [| |]
-        let actual = Sort.quickSort shuffled
-        CollectionAssert.AreEqual(expected, actual)
-
-        let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
-        let shuffled = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
-        let actual = Sort.quickSort shuffled
-        CollectionAssert.AreEqual(expected, actual)
-
-        let expected = [| 1; 1; 1; 1; 1; 1; 1; 1; 1; 1 |]
-        let shuffled = [| 1; 1; 1; 1; 1; 1; 1; 1; 1; 1 |]
-        let actual = Sort.quickSort shuffled
-        CollectionAssert.AreEqual(expected, actual)
-
-        let expected = [| 0; 1; 2; 3; 4; 5; 6; 7; 8; 9 |]
-        let shuffled = [| 2; 6; 8; 4; 1; 5; 7; 9; 3; 0 |]
-        let actual = Sort.quickSort shuffled
-        CollectionAssert.AreEqual(expected, actual)
-
-        let expected = [| 1; 1; 1; 1; 2; 2; 2; 2; 3; 3; |]
-        let shuffled = [| 2; 2; 2; 2; 1; 1; 1; 1; 3; 3; |]
-        let actual = Sort.quickSort shuffled
+        Sort.quickSort actual
         CollectionAssert.AreEqual(expected, actual)

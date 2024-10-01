@@ -35,23 +35,13 @@ module Sort =
                 if a[j] > a[j + 1] then
                     swap &a[j] &a[j + 1]
 
-    let rec quickSortInPlaceImpl (sp: Span<int>) =
+    let rec quickSortImpl (sp: Span<int>) =
         if sp.Length <> 0 then
             let pivot = sp[0]
             let m1 = partition sp (fun n -> n < pivot)
             let m2 = partition (sp.Slice(m1)) (fun n -> n = pivot)
-            quickSortInPlaceImpl (sp.Slice(0, m1))
-            quickSortInPlaceImpl (sp.Slice(m1 + m2))
+            quickSortImpl (sp.Slice(0, m1))
+            quickSortImpl (sp.Slice(m1 + m2))
 
-    let quickSortInPlace (a: int array) =
-        quickSortInPlaceImpl (a.AsSpan())
-
-    let rec quickSort (a: int array) =
-        if a.Length = 0 then
-            a
-        else
-            let pivot = a[0]
-            let less, notLess = a |> Array.partition (fun n -> n < pivot)
-            let equal, greater = notLess |> Array.partition (fun n -> n = pivot)
-            [ quickSort less; equal; quickSort greater ] |> Array.concat
-    
+    let quickSort (a: int array) =
+        quickSortImpl (a.AsSpan())
