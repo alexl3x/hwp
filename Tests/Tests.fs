@@ -45,7 +45,14 @@ type TestNumeric () =
 [<TestClass>]
 type TestSort () =
 
-    member this.TestSort(sort: int array -> unit) =
+    member this.TestSort(sort: Sort.Comparator<'T> -> 'T array -> unit) =
+        let comp (a: int) (b: int) =
+            if a > b then Sort.Greater
+            elif a < b then Sort.Less
+            else Sort.Equal
+
+        let sort = sort comp
+
         let expected = [| |]
         let actual   = [| |]
         sort actual
